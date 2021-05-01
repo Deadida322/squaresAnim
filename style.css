@@ -1,0 +1,59 @@
+
+html{
+    overflow: hidden;
+    background-color: #161616;
+}
+canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+form{
+    flex-direction: column;
+    display: flex;
+    padding: 15px;
+    
+}
+.square{
+    animation-play-state: paused;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32%;
+    height: 120px;
+    background-color: #a0e4ff;
+    animation-name: squares;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+.square2{
+    left: auto;
+    right: 0;
+    animation-delay: .5s;
+}
+.circle{
+    left: 33%;
+    border-radius: 50%;
+    background-color:#ffa0c8;
+    animation-direction: alternate-reverse;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes squares {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(calc(100vh - 120px));
+    }
+}
